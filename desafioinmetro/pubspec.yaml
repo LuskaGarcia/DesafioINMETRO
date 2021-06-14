@@ -48,7 +48,7 @@ flutter:
   assets:
     - assets/images/logo_iti.png
     - assets/images/inmetro-logo-2.png
-    - assets/images/bluetooth-icon-png-16.jpg
+    - assets/images/bluetooth_icon.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

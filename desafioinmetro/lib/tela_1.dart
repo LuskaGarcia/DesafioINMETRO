@@ -16,6 +16,9 @@ class cabecalhoFixo extends State<cabecalho> {
 
     
     return  Scaffold(
+        appBar: AppBar(toolbarHeight: 0,
+          backgroundColor: Color.fromRGBO(18,10,143,1)),
+
       body: Container(
                 width: double.infinity,
                 height: double.infinity,
@@ -23,7 +26,7 @@ class cabecalhoFixo extends State<cabecalho> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Container(height: 30,),
+                    Container(height: 15,),
                   new RichText(
                     text: new TextSpan(
 
@@ -51,10 +54,21 @@ class cabecalhoFixo extends State<cabecalho> {
                         height: 110,
                         child: Image.asset('assets/images/logo_iti.png'),
                     ),
-                    ],)      
+                    ],),
+                    Container(height:70),
+                   Center(
+                     child: Container(
+                           width: 170,
+                          height: 170,
+                          child: Image.asset('assets/images/bluetooth_icon.png'),
+                       ),
+                   ),      
                   ]),
               ),
+
     );
+
+
   }
 
 }
