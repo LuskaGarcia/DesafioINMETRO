@@ -1,3 +1,4 @@
+import 'package:desafioinmetro/buttons.dart';
 import 'package:flutter/material.dart';
 
 class tela_2 extends StatefulWidget {
@@ -147,6 +148,9 @@ class _tela_2State extends State<tela_2> {
                           
                       ),
                     ),
+                    Container(
+                      child:buttons_bomba(),
+                    )
 
                   ]
                   ),
