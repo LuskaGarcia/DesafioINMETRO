@@ -1,16 +1,19 @@
+
+import 'package:desafioinmetro/tela_2.dart';
 import 'package:flutter/cupertino.dart';
 
 import 'package:flutter/material.dart';
 
-class cabecalho extends StatefulWidget{
+class tela_1 extends StatefulWidget{
   @override
-  State<cabecalho> createState() {
+  State<tela_1> createState() {
     return cabecalhoFixo();
   }
 
 }
 
-class cabecalhoFixo extends State<cabecalho> {
+class cabecalhoFixo extends State<tela_1> {
+
   @override
   Widget build(BuildContext context) {
 
@@ -40,21 +43,24 @@ class cabecalhoFixo extends State<cabecalho> {
                      ],
                     ),
                    ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [ 
-                      Container(
-                          width: 110,
-                          height: 110,
-                          child: Image.asset('assets/images/inmetro-logo-2.png'),
-                          ),
-                  Container(
-                        width: 110,
-                        height: 110,
-                        child: Image.asset('assets/images/logo_iti.png'),
-                    ),
-                    ],),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 0, horizontal:40.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [ 
+                        Container(
+                            width: 130,
+                            height: 110,
+                            child: Image.asset('assets/images/inmetro-logo-2.png'),
+                            ),
+                    Container(
+                          width: 100,
+                          height: 100,
+                          child: Image.asset('assets/images/logo_iti.png'),
+                      ),
+                      ],),
+                  ),
                     Container(height:70),
                    Center(
                      child: Container(
@@ -62,10 +68,19 @@ class cabecalhoFixo extends State<cabecalho> {
                           height: 170,
                           child: Image.asset('assets/images/bluetooth_icon.png'),
                        ),
-                   ),      
+                   ),
+                   Container(height:70),
+                           Container(child: 
+                           ElevatedButton(onPressed: () {
+                             Navigator.of(context).push( //PODE COLOCAR PUSHREPLACEMENT
+                    MaterialPageRoute(builder: (context) => tela_2()),
+                  );
+                           }, child: null,
+                           )
+                  ),
                   ]),
-              ),
-
+                  
+    )
     );
 
 

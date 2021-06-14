@@ -6,7 +6,7 @@ import 'tela_1.dart';
 main() {
   runApp(MaterialApp(
       title: 'Desafio Inmetro',
-      home: cabecalho(),
+      home: tela_1(),
   ));
 
 }
