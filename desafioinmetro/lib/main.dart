@@ -1,14 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'tela_1.dart';
+import 'package:desafioinmetro/procurar_bomba_page.dart';
 
 main() {
   runApp(MaterialApp(
-      title: 'Desafio Inmetro',
-      home: tela_1(),
+    title: 'Desafio Inmetro',
+    home: ProcurarBombaPage(),
   ));
-
 }
-
-
