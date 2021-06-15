@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 class tela_1 extends StatefulWidget{
   @override
   State<tela_1> createState() {
+    
     return cabecalhoFixo();
   }
 
@@ -16,16 +17,22 @@ class cabecalhoFixo extends State<tela_1> {
 
   @override
   Widget build(BuildContext context) {
-
+    fetchUserOrder(context); 
     
     return  Scaffold(
+      
         appBar: AppBar(toolbarHeight: 0,
           backgroundColor: Color.fromRGBO(18,10,143,1)),
 
-      body: Container(
+      body: 
+      
+      Container(
                 width: double.infinity,
                 height: double.infinity,
-                child: Column(
+                
+                child:
+                
+                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
@@ -70,22 +77,46 @@ class cabecalhoFixo extends State<tela_1> {
                        ),
                    ),
                    Container(height:70),
-                           Container(child: 
-                           ElevatedButton(onPressed: () {
-                             Navigator.of(context).push( //PODE COLOCAR PUSHREPLACEMENT
-                    MaterialPageRoute(builder: (context) => tela_2()),
-                  );
-                           }, child: null,
-                           )
-                  ),
-                    
-                  ]
+                           Container(
+                             width: 170,
+                             child: Row(
+                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                               crossAxisAlignment: CrossAxisAlignment.center,
+                               children: [
+                                 Container(
+                                   height: 13,
+                                   width: 13,
+                                   child:
+                                    CircularProgressIndicator(color: Colors.lightBlue[700],)
+                                 ),
+                                 Container(
+                                   child: Text('Processando...', 
+                                style: TextStyle(color:Colors.lightBlue[700],
+                                fontSize: 20, 
+                                fontWeight: FontWeight.bold
+                                )
+                                ),
+                                 )
+                               ],
+                             )
+                           
                   ),
                   
-    )
-    );
+                  ]
+                           )
+                  ),
+                  
+                    
+                  );
+                  
 
 
   }
 
 }
+
+Future<void> fetchUserOrder(BuildContext context) =>
+    Future.delayed(Duration(seconds: 5), () {
+  Navigator.of(context).push( //PODE COLOCAR PUSHREPLACEMENT
+                    MaterialPageRoute(builder: (context) => tela_2()));
+});

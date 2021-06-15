@@ -66,6 +66,7 @@ class bomba_1 extends StatelessWidget {
                               ),
                               onTap: (){
                                 valorBomba = 1;
+                                 print(valorBomba);
                               },
                               )
                           ),
@@ -102,6 +103,8 @@ class bomba_2 extends StatelessWidget {
                               ),
                                onTap: (){
                                 valorBomba = 2;
+                                print(valorBomba);
+                                
                               },
                               )
                           ),
@@ -138,6 +141,7 @@ class bomba_3 extends StatelessWidget {
                               ),
                                onTap: (){
                                 valorBomba = 3;
+                                 print(valorBomba);
                               },
                               )
                           ),
@@ -174,6 +178,7 @@ class bomba_4 extends StatelessWidget {
                               ),
                                onTap: (){
                                 valorBomba = 4;
+                                 print(valorBomba);
                               },
                               )
                           ),
@@ -210,6 +215,7 @@ class bomba_5 extends StatelessWidget {
                               ),
                                onTap: (){
                                 valorBomba = 5;
+                                 print(valorBomba);
                               },
                               )
                           ),
@@ -246,10 +252,12 @@ class bomba_6 extends StatelessWidget {
                               ),
                                onTap: (){
                                 valorBomba = 6;
+                                 print(valorBomba);
                               },
                               )
                           ),
       
     );
+    
   }
 }
