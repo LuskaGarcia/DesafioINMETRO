@@ -17,7 +17,7 @@ class _buttons_bombaState extends State<buttons_bomba> {
     return Container(
       alignment: Alignment.topLeft,
       child: Padding(
-        padding: const EdgeInsets.only(left: 30, right: 70,top: 10),
+        padding: const EdgeInsets.only(left: 30, right: 40,top: 10),
 
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

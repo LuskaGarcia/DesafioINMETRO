@@ -78,7 +78,9 @@ class cabecalhoFixo extends State<tela_1> {
                            }, child: null,
                            )
                   ),
-                  ]),
+                    
+                  ]
+                  ),
                   
     )
     );

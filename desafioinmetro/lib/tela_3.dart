@@ -1,19 +1,18 @@
 import 'package:desafioinmetro/buttons.dart';
-import 'package:desafioinmetro/tela_3.dart';
 import 'package:flutter/material.dart';
 
+var _text = '0';
 
-
-class tela_2 extends StatefulWidget {
-  const tela_2({ Key? key }) : super(key: key);
+class tela_3 extends StatefulWidget {
+  const tela_3({ Key? key }) : super(key: key);
 
   
 
   @override
-  _tela_2State createState() => _tela_2State();
+  _tela_3State createState() => _tela_3State();
 }
 
-class _tela_2State extends State<tela_2> {
+class _tela_3State extends State<tela_3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -59,11 +58,19 @@ class _tela_2State extends State<tela_2> {
                       ),
                       ],),
                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
+                    Container(
+                       width: 300,
+                      height: 5,
+                      decoration: BoxDecoration(
+                                  color: Color.fromRGBO(0, 150, 255,1),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                    ),
+                     Padding(
+                      padding: const EdgeInsets.only(left: 30, right: 0, top: 5,bottom: 10),
                       child: Container(
                         alignment: Alignment.topLeft,
-                        child: Text('Posto Rede Furnas', 
+                        child: Text('Dados do Estabelecimento', 
                         style: TextStyle(
                           fontSize: 25.0,
                           color: Colors.blue[900], 
@@ -76,73 +83,30 @@ class _tela_2State extends State<tela_2> {
                       padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
                       child: Container(
                          alignment: Alignment.topLeft,
-                        child: Text('Rua: Getulio Vargas  Bairro: Centro \n'
-                        'Cidade: Sombrio  CEP:88960000',
+                        child: Text('Nome: Posto Rede Furnas \n'
+                        'Localização: Sombrio',
                         style: TextStyle(
                            fontSize: 15.0,
                           color: Colors.blue[900],
+                          
                         ),
-                        ),  
+                        ), 
                       ),
                     ),
-                    Container(height: 20),
-                  Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 20),
-                    child: Container(
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Container(
-                            child: GestureDetector(
-                              child: Container(
-                                width: 110,
-                                height: 30,
-                                decoration: BoxDecoration(
-                                  color: Color.fromRGBO(0, 127, 255,1),
+                    Container(height: 100),
+                     Container(
+                       width: 300,
+                      height: 5,
+                      decoration: BoxDecoration(
+                                  color: Color.fromRGBO(0, 150, 255,1),
                                   borderRadius: BorderRadius.circular(20),
                                 ),
-                                child: Center(child: Text('CONFIRMA', 
-                                style: TextStyle(color:Colors.white,fontSize: 15, 
-                                fontWeight: FontWeight.bold
-                                )
-                                ,)
-                                ),
-                              ),
-                              )
-                          ),
-                           Container(
-                            child: GestureDetector(
-                              child: Container(
-                                width: 175,
-                                height: 30,
-                                decoration: BoxDecoration(
-                                  color: Color.fromRGBO(255, 255, 255,1),
-                                  borderRadius: BorderRadius.circular(20),
-                                   border: Border.all(
-                                     color: Colors.blue,
-                                   ),
-                                ),
-                                child: Center(child: Text('BUSCAR NOVAMENTE', 
-                                style: TextStyle(color:Colors.lightBlue[700],
-                                fontSize: 15, 
-                                fontWeight: FontWeight.bold
-                                )
-                                ),
-                                ),
-                              ),
-                              )
-                          ),
-                        ],
-                      ),
                     ),
-                  ),
-                  Container(height:40,),
-                  Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 30, right: 0, top: 5,bottom: 10),
                       child: Container(
                         alignment: Alignment.topLeft,
-                        child: Text('Selecionar Bomba', 
+                        child: Text('Dados do Estabelecimento', 
                         style: TextStyle(
                           fontSize: 25.0,
                           color: Colors.blue[900], 
@@ -151,21 +115,51 @@ class _tela_2State extends State<tela_2> {
                           
                       ),
                     ),
-                    Container(
-                      child:buttons_bomba(),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
+                      child: Row(
+                        children: [
+                          Container(
+                             alignment: Alignment.topLeft,
+                            child: Text('N° da Bomba: ' + _text,
+                            style: TextStyle(
+                               fontSize: 15.0,
+                              color: Colors.blue[900],
+                            ),
+                            ), 
+                          ),                          
+                        ],
+                      ),
                     ),
-                    Container(height: 70,),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
+                      child: Container(
+                         alignment: Alignment.topLeft,
+                        child: Text('Data: \n'
+                        'Hora: \n'
+                        'Volume Abastecido: \n'
+                        'Preço/litro: \n'
+                        'Total a pagar: '
+                        ,
+                        style: TextStyle(
+                           fontSize: 15.0,
+                          color: Colors.blue[900],
+                        ),
+                        ), 
+                      ),
+                    ),
+                    Container(height: 40,),
                      Container(
                             child: GestureDetector(
                               child: Container(
                                 width: 200,
-                                height: 40,
+                                height: 30,
                                 decoration: BoxDecoration(
                                   color: Color.fromRGBO(0, 127, 255,1),
                                   borderRadius: BorderRadius.circular(15),
                                 ),
-                                child: Center(child: Text('VERIFICAR BOMBA', 
-                                style: TextStyle(color:Colors.white,fontSize: 20, 
+                                child: Center(child: Text('MAIS INFORMAÇÕES', 
+                                style: TextStyle(color:Colors.white,fontSize: 17, 
                                 fontWeight: FontWeight.bold
                                 )
                                 ,)
@@ -177,12 +171,9 @@ class _tela_2State extends State<tela_2> {
                               },
                               )
                           ),
-                  ]                 
-                  ),
-                  ),
-                  
+                  ]
+                ),          
+      ), 
     );
-
-
   }
 }
