@@ -1,19 +1,8 @@
-import 'package:desafioinmetro/buttons.dart';
-import 'package:desafioinmetro/tela_4.dart';
 import 'package:flutter/material.dart';
 
-var _text = '0';
+class tela_4 extends StatelessWidget {
+  const tela_4({ Key? key }) : super(key: key);
 
-class tela_3 extends StatefulWidget {
-  const tela_3({ Key? key }) : super(key: key);
-
-  
-
-  @override
-  _tela_3State createState() => _tela_3State();
-}
-
-class _tela_3State extends State<tela_3> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -71,7 +60,7 @@ class _tela_3State extends State<tela_3> {
                       padding: const EdgeInsets.only(left: 30, right: 0, top: 5,bottom: 10),
                       child: Container(
                         alignment: Alignment.topLeft,
-                        child: Text('Dados do Estabelecimento', 
+                        child: Text('Dados de Verificação', 
                         style: TextStyle(
                           fontSize: 25.0,
                           color: Colors.blue[900], 
@@ -84,8 +73,8 @@ class _tela_3State extends State<tela_3> {
                       padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
                       child: Container(
                          alignment: Alignment.topLeft,
-                        child: Text('Nome: Posto Rede Furnas \n'
-                        'Localização: Sombrio',
+                        child: Text('Dados de medição: \n'
+                        'Integridade do Software: ',
                         style: TextStyle(
                            fontSize: 15.0,
                           color: Colors.blue[900],
@@ -94,87 +83,91 @@ class _tela_3State extends State<tela_3> {
                         ), 
                       ),
                     ),
-                    Container(height: 100),
-                     Container(
-                       width: 300,
-                      height: 5,
-                      decoration: BoxDecoration(
-                                  color: Color.fromRGBO(0, 150, 255,1),
-                                  borderRadius: BorderRadius.circular(20),
+                    Container(height: 325,),
+                    Container(
+                      child: Padding(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            GestureDetector(
+                              child:
+                                Container(
+                                  width: 150,
+                                  height: 30,
+
+                                  child:    
+                                  Row(
+                                    children: [
+                                      Icon(Icons.arrow_downward, size:14, color:Colors.lightBlue[600],),
+                                      Text('DOWNLOAD', 
+                                      style: TextStyle(color:Colors.lightBlue[600],
+                                      fontSize: 15, 
+                                      fontWeight: FontWeight.bold
+                                      )
+                                      ),
+                                    ],
+                                  ),
+                                  
+                                  
                                 ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(left: 30, right: 0, top: 5,bottom: 10),
-                      child: Container(
-                        alignment: Alignment.topLeft,
-                        child: Text('Dados do Abastecimento', 
-                        style: TextStyle(
-                          fontSize: 25.0,
-                          color: Colors.blue[900], 
-                          fontWeight: FontWeight.bold),
-                          ),
-                          
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
-                      child: Row(
-                        children: [
-                          Container(
-                             alignment: Alignment.topLeft,
-                            child: Text('N° da Bomba: ' + _text,
-                            style: TextStyle(
-                               fontSize: 15.0,
-                              color: Colors.blue[900],
                             ),
-                            ), 
-                          ),                          
-                        ],
-                      ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 30),
-                      child: Container(
-                         alignment: Alignment.topLeft,
-                        child: Text('Data: \n'
-                        'Hora: \n'
-                        'Volume Abastecido: \n'
-                        'Preço/litro: \n'
-                        'Total a pagar: '
-                        ,
-                        style: TextStyle(
-                           fontSize: 15.0,
-                          color: Colors.blue[900],
+                            Container(
+                              child: GestureDetector(
+                                child:
+                                  Container(
+                                    width: 121,
+                                    height: 30,
+
+                                    child:    
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Icon(Icons.camera_alt,size:14, color:Colors.lightBlue[600],),
+                                        Text('NOVA LEITURA', 
+                                        style: TextStyle(color:Colors.lightBlue[600],
+                                        fontSize: 15, 
+                                        fontWeight: FontWeight.bold
+                                        )
+                                        ),
+                                      ],
+                                    ),
+                                    
+                                    
+                                  ),
+                              ),
+                            ),  
+                          ],  
                         ),
-                        ), 
                       ),
                     ),
-                    Container(height: 40,),
+                    Container(height: 5,),
                      Container(
                             child: GestureDetector(
                               child: Container(
-                                width: 200,
-                                height: 30,
+                                width: 180,
+                                height: 25,
                                 decoration: BoxDecoration(
-                                  color: Color.fromRGBO(0, 127, 255,1),
+                                  color: Color.fromRGBO(18,10,143,1),
                                   borderRadius: BorderRadius.circular(15),
                                 ),
-                                child: Center(child: Text('MAIS INFORMAÇÕES', 
-                                style: TextStyle(color:Colors.white,fontSize: 17, 
+                                child: Center(child: Text('RELATAR PROBLEMAS', 
+                                style: TextStyle(color:Colors.white,fontSize: 14, 
                                 fontWeight: FontWeight.bold
                                 )
                                 ,)
                                 ),
                               ),
-                              onTap: (){
-                                 Navigator.of(context).push( //PODE COLOCAR PUSHREPLACEMENT
-                    MaterialPageRoute(builder: (context) => tela_4()));
-                              },
-                              )
-                          ),
-                  ]
-                ),          
-      ), 
+                            ),
+                              ),
+                    
+                  ],
+                  
+                    
+                ),
+      ),
     );
+                  
   }
 }
